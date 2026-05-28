@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portafolio DVW</title>
+    <link rel="icon" type="image/png" href="IMGporfolio/logo05.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">PORTAFOLIO</div>
+            <button class="nav-toggle" aria-label="Abrir menú" onclick="this.closest('nav').querySelector('.nav-menu').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca-de-mi">Acerca de mí</a></li>
+                <li><a href="#mis-services">Mis servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <header id="inicio" class="hero-banner">
+        <div class="banner-content">
+            <img src="IMGporfolio/logo05.png" alt="Logo Velasco Wilcox" class="logo-animado">
+            <h1>DISEÑADOR <span>HIPERMEDIA</span></h1>
+            <p>Narrativas, experiencias visuales e interactivas.</p>
+        </div>
+    </header>
+
+
+
+    <section id="proyectos" class="gallery-section">
+            <h2 class="section-label">01. Fotografía</h2>
+            <div class="portfolio-grid">
+                <div class="grid-item"><img src="IMGporfolio/foto01.png" alt="Work"></div>
+                <div class="grid-item"><img src="IMGporfolio/foto02.png" alt="Work"></div>
+                <div class="grid-item"><img src="IMGporfolio/foto14.jpg" alt="Work"></div>
+                <div class="grid-item"><img src="IMGporfolio/foto04.png" alt="Work"></div>
+                <div class="grid-item"><img src="IMGporfolio/foto05.png" alt="Work"></div>
+                <div class="grid-item"><img src="IMGporfolio/foto06.png" alt="Work"></div>
+                <div class="grid-item"><img src="IMGporfolio/foto07.png" alt="Work"></div>
+                <div class="grid-item"><img src="IMGporfolio/foto15.jpg" alt="Work"></div>
+            </div>
+
+            <h2 class="section-label">02. Ilustración</h2>
+            <div class="portfolio-grid">
+                <div class="grid-item is-square"><img src="IMGporfolio/ilus01.png" alt="Ilustración"></div>
+                <div class="grid-item is-square"><img src="IMGporfolio/ilus02.png" alt="Ilustración"></div>
+                <div class="grid-item is-square"><img src="IMGporfolio/ilus04.png" alt="Ilustración"></div>
+                <div class="grid-item is-square"><img src="IMGporfolio/ilus05.png" alt="Ilustración"></div>
+            </div>
+
+            <h2 class="section-label">03. Flyers</h2>
+            <div class="portfolio-grid flyers-grid">
+                <div class="grid-item"><img src="IMGporfolio/flyer 01.png" alt="Flyer"></div>
+                <div class="grid-item"><img src="IMGporfolio/flyer luiskiss.png" alt="Flyer"></div>
+                <div class="grid-item"><img src="IMGporfolio/flayer game.png" alt="Flyer"></div>
+                <div class="grid-item"><img src="IMGporfolio/flyer font.png" alt="Flyer"></div>
+            </div>
+        </section>
+
+    <section class="intro-section">
+        <div class="container">
+            <h2>Bienvenidos a mi espacio creativo</h2>
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <p>Este sitio es una vitrina de soluciones visuales donde convergen la tecnología y el arte. Aquí encontrarás una exploración profunda de la narrativa audiovisual, el branding estratégico y el diseño de interfaces, todo con un enfoque en la cultura local y la innovación digital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="acerca-de-mi" class="about-section">
+        <div class="about-inner">
+            <div class="about-top">
+                <div class="about-image">
+                    <div class="profile-pic-wrapper">
+                        <img src="IMGporfolio/fotoperfil03.png" alt="Velasco Wilcox - Diseñador" class="profile-pic">
+                    </div>
+                </div>
+                <div class="about-info">
+                    <h2>Acerca de mí</h2>
+                    <p>¡Hola! Soy un diseñador hipermedia de Cartagena, Colombia, enfocado en crear experiencias digitales que conecten lo técnico con lo emocional. Mi trabajo se mueve en la narrativa audiovisual, el branding y el diseño de interfaces que no solo se ven bien, sino que funcionan.</p>
+                </div>
+            </div>
+            <div class="tools-row">
+                <img src="IMGporfolio/iconoAi.png" alt="icono" class="icon-style">
+                <img src="IMGporfolio/icono.photo.png" alt="icono" class="icon-style">
+                <img src="IMGporfolio/icono.lr.png" alt="icono" class="icon-style">
+                <img src="IMGporfolio/icono.affinity.png" alt="icono" class="icon-style">
+                <img src="IMGporfolio/iconodavinci.jpg" alt="icono" class="icon-style">
+                <img src="IMGporfolio/iconokrita.jpg" alt="icono" class="icon-style">
+            </div>
+        </div>
+    </section>
+
+    <section id="mis-services" class="services-section">
+        <div class="container">
+            <h2>Mis Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="IMGporfolio/imgaudivisual.png" alt="Video y Foto">
+                    <h3>Audiovisual</h3>
+                    <p>Fotografía profesional y edición de video avanzado con corrección de color profesional.</p>
+                </div>
+                <div class="service-card">
+                    <img src="IMGporfolio/img branding.png" alt="Branding">
+                    <h3>Branding</h3>
+                    <p>Construcción de identidad visual, logotipos y sistemas de marca con impacto social.</p>
+                </div>
+                <div class="service-card">
+                    <img src="IMGporfolio/imguxui.png" alt="UX/UI">
+                    <h3>Diseño UX/UI</h3>
+                    <p>Interfaces intuitivas creadas en Figma, priorizando la experiencia del usuario final.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p><strong>Email:</strong> velascowilcoxdavid@gmail.com</p>
+                    <p><strong>Teléfono:</strong> +57 313 518 3989</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/david_vw/">Instagram</a> |<a href="https://wa.me/3135183989">WhatsApp</a>
+                    </div>
+                </div>
+                <form action="https://formspree.io/f/mnjwbwwd" method="POST" class="contact-form">
+                    <input type="text" name="nombre" placeholder="Nombre completo" required>
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                    <textarea name="mensaje" rows="5" placeholder="¿En qué puedo ayudarte?" required></textarea>
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Portafolio Velasco Wilcox 2026 - </p>
+    </footer>
+    <script>
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>
