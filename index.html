@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de David Velasco Wilcox, diseñador hipermedia especializado en fotografía, ilustración, diseño gráfico, producción audiovisual y diseño de interfaces.">
+  <title>Velasco Wilcox — Portafolio</title>
+  <link rel="icon" type="image/png" href="img/f/f logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Aplica el tema guardado antes de pintar, para evitar parpadeo -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('vw-theme');
+      if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8XEVS3ZLW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W8XEVS3ZLW');
+  </script>
+</head>
+<body>
+
+  <!-- 01 - Header / Nav -->
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Velasco Wilcox</a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#" class="nav-link">Inicio</a>
+        <a href="#proyectos" class="nav-link">Proyectos</a>
+        <a href="#acerca-de-mi" class="nav-link">Acerca de mí</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 02 - Hero -->
+  <section class="hero">
+    <button type="button" class="hero-photo" id="themeToggle" title="Cambiar tema claro/oscuro" aria-label="Cambiar tema claro/oscuro">
+      <img src="img/f/f logo.png" alt="Retrato de David Velasco Wilcox">
+    </button>
+    <h1 class="hero-title">
+      Velasco Wilcox
+      <span class="hero-subtitle">
+        <span class="hero-red">Diseñador</span> <span class="hero-blue">Hipermedia</span>
+      </span>
+    </h1>
+    <p class="hero-tagline">Narrativas y experiencias interactivas.</p>
+    <a href="#proyectos" class="btn-primary">Ver proyectos ↓</a>
+  </section>
+
+  <!-- 03 - Proyectos Creativos -->
+  <section class="proyectos" id="proyectos">
+    <div class="proyectos-inner">
+      <h2 class="section-title">Proyectos Creativos</h2>
+      <div class="filtros" role="tablist" aria-label="Filtrar proyectos por categoría">
+        <span class="filtros-label">Filtros:</span>
+        <button class="filtro is-active" data-filter="todo" role="tab" aria-selected="true">Todo</button>
+        <span class="filtros-sep">·</span>
+        <button class="filtro" data-filter="fotografia" role="tab" aria-selected="false">Fotografía</button>
+        <span class="filtros-sep">·</span>
+        <button class="filtro" data-filter="audiovisual" role="tab" aria-selected="false">Audivisual</button>
+        <span class="filtros-sep">·</span>
+        <button class="filtro" data-filter="ilustracion" role="tab" aria-selected="false">Ilustración</button>
+        <span class="filtros-sep">·</span>
+        <button class="filtro" data-filter="flyers" role="tab" aria-selected="false">Flyers</button>
+      </div>
+
+      <div class="grid" id="grid-proyectos">
+      
+        <a class="card" data-category="fotografia" data-caption="Fotografía — luz natural" href="#" tabindex="0">
+          <div class="card-img"><img src="img/foto-03.png" alt="Fotografía — luz natural" loading="lazy"></div>
+          <p class="card-caption">Fotografía — luz natural</p>
+        </a>
+        
+        <a class="card" data-category="ilustracion" data-caption="Ilustración — personaje original" data-images="proyectos/ilustraciones/stickers vdb/sticker vdb 01.webp,proyectos/ilustraciones/stickers vdb/sticker vdb 02.webp,proyectos/ilustraciones/stickers vdb/sticker vdb 03.webp" href="#" tabindex="0">
+          <div class="card-img"><img src="proyectos/ilustraciones/stickers vdb/sticker vdb 01.webp" alt="Ilustración — personaje original" loading="lazy"></div>
+          <p class="card-caption">Ilustración — stickers - vida de barrio</p>
+        </a>
+        <a class="card" data-category="ilustracion" data-caption="Ilustración — arte digital" data-images="proyectos/ilustraciones/arte digital/arte digital 01.png" href="#" tabindex="0">
+          <div class="card-img"><img src="proyectos/ilustraciones/arte digital/arte digital 01.png" alt="Ilustración — arte digital" loading="lazy"></div>
+          <p class="card-caption">Ilustración — arte digital</p>
+        </a>
+        <a class="card" data-category="flyers" data-caption="Flyer — evento musical" href="#" tabindex="0">
+          <div class="card-img"><img src="img/flyer-01.png" alt="Flyer — evento musical" loading="lazy"></div>
+          <p class="card-caption">Flyer — evento musical</p>
+        </a>
+        <a class="card" data-category="flyers" data-caption="Flyer — showcase Luis Kiss" href="#" tabindex="0">
+          <div class="card-img"><img src="img/flyer-luiskiss.png" alt="Flyer — showcase Luis Kiss" loading="lazy"></div>
+          <p class="card-caption">Flyer — showcase Luis Kiss</p>
+        </a>
+        <a class="card" data-category="flyers" data-caption="Flyer — noche de juegos" href="#" tabindex="0">
+          <div class="card-img"><img src="img/flyer-game.png" alt="Flyer — noche de juegos" loading="lazy"></div>
+          <p class="card-caption">Flyer — noche de juegos</p>
+        </a>
+        <a class="card" data-category="fotografia" data-caption="Fotografía — retrato en estudio" href="#" tabindex="0">
+          <div class="card-img"><img src="img/foto-04.png" alt="Fotografía — retrato en estudio" loading="lazy"></div>
+          <p class="card-caption">Fotografía — retrato en estudio</p>
+        </a>
+        <a class="card" data-category="ilustracion" data-caption="Ilustración — composición color" data-images="proyectos/ilustraciones/composicion color/composicion color 01.png" href="#" tabindex="0">
+          <div class="card-img"><img src="proyectos/ilustraciones/composicion color/composicion color 01.png" alt="Ilustración — composición color" loading="lazy"></div>
+          <p class="card-caption">Ilustración — composición color</p>
+        </a>
+        <a class="card" data-category="flyers" data-caption="Flyer — tipografía experimental" href="#" tabindex="0">
+          <div class="card-img"><img src="img/flyer-font.png" alt="Flyer — tipografía experimental" loading="lazy"></div>
+          <p class="card-caption">Flyer — tipografía experimental</p>
+        </a>
+          <a class="card" data-category="audiovisual" data-caption="Audivisual — Podcast - reggaetón el nuevo Rock" data-images="proyectos/audiovisual/podcasts/rnr/portada-p-rnr.png,proyectos/audiovisual/podcasts/rnr/reel-p-rnr.mp4,proyectos/audiovisual/podcasts/rnr/podcast rnr.mov" href="#" tabindex="0">
+          <div class="card-img"><img src="proyectos/audiovisual/podcasts/rnr/portada-p-rnr.png" alt="Audiovisual — podcast reggaetón el nuevo rock" loading="lazy"></div>
+          <p class="card-caption">Audiovisual — podcast - reggeton el nuevo rock</p>
+        </a>
+        
+        <a class="card" data-category="audiovisual" data-caption="Audiovisual — podcast - que mierda es esto?" data-images="proyectos/audiovisual/podcasts/qmee/portada-p-qmee.png,proyectos/audiovisual/podcasts/qmee/reel-p-qmee.mp4,proyectos/audiovisual/podcasts/qmee/podcast qmee.mov" href="#" tabindex="0">
+          <div class="card-img"><img src="proyectos/audiovisual/podcasts/qmee/portada-p-qmee.png" alt="Audiovisual — podcast - que mierda es esto?" loading="lazy"></div>
+          <p class="card-caption">Audiovisual — podcast - que mierda es esto?</p>
+        </a>
+        
+        <a class="card" data-category="audiovisual" data-caption="Audiovisual — corto - pedro" data-images="proyectos/audiovisual/cortos/pedro/portada pedro.webp,proyectos/audiovisual/cortos/pedro/corto pedro.mov" href="#" tabindex="0">
+          <div class="card-img"><img src="proyectos/audiovisual/cortos/pedro/portada pedro.webp" alt="Audiovisual — corto - pedro" loading="lazy"></div>
+          <p class="card-caption">Audiovisual — corto - pedro</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 - Acerca de mí + Servicios (mismo fondo) -->
+  <section class="acerca" id="acerca-de-mi">
+    <div class="acerca-inner">
+      <h2 class="section-title light">Acerca de mí</h2>
+      <div class="acerca-content">
+        <div class="acerca-photo">
+          <img src="img/f/foto perfil.png" alt="David Velasco Wilcox">
+        </div>
+        <div class="acerca-text">
+          <p class="acerca-nombre">David Fagith Velasco Wilcox</p>
+          <p class="acerca-bio">
+            Soy estudiante de 8vo semestre de Diseño Hipermedia y tengo un perfil multidisciplinar en piezas
+            gráficas, producción audiovisual, fotografía, ilustración e interfaces. Me interesa explorar
+            distintos lenguajes visuales y adaptarme a diferentes formatos y necesidades creativas. Busco una
+            práctica donde pueda aportar mis conocimientos, seguir aprendiendo junto a un equipo con experiencia
+            y fortalecer mi proceso creativo en un entorno profesional.
+          </p>
+          <div class="software-row">
+            <img src="img/i/i ai1.png" alt="Adobe Illustrator" title="Adobe Illustrator">
+            <img src="img/i/i affinity1.png" alt="Affinity" title="Affinity">
+            <img src="img/i/i lr1.png" alt="Adobe Lightroom" title="Adobe Lightroom">
+            <img src="img/i/i davinci1.png" alt="DaVinci Resolve" title="DaVinci Resolve">
+            <img src="img/i/i figma1.png" alt="figma" title="figma">
+            <img src="img/i/i capcut1.png" alt="CapCut" title="CapCut">
+            <img src="img/i/i ps1.png" alt="Adobe Photoshop" title="Adobe Photoshop">
+            <img src="img/i/i xd1.png" alt="Adobe XD" title="Adobe XD">
+            <img src="img/i/i an1.png" alt="Adobe Animate" title="Adobe Animate">
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title light" id="servicios">¿Cómo puedo ayudarte?</h2>
+      <div class="servicios-grid">
+        <div class="servicio-card">
+          <h3>Audiovisual</h3>
+          <p>Fotografía, edición de video y corrección de color.</p>
+        </div>
+        <div class="servicio-card">
+          <h3>UX/UI Design</h3>
+          <p>Páginas web, apps móviles y prototipos interactivos.</p>
+        </div>
+        <div class="servicio-card">
+          <h3>Identidad Visual</h3>
+          <p>Branding, manuales de marca y diseño gráfico.</p>
+        </div>
+        <div class="servicio-card">
+          <h3>Postproducción</h3>
+          <p>Montaje, Motion Graphics y finalización de video.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 - Contacto + Footer -->
+  <section class="contacto" id="contacto">
+    <div class="contacto-inner">
+      <div class="contacto-grid">
+        <div class="contacto-form-col">
+          <h2 class="section-title light">Contacto</h2>
+          <p class="contacto-sub">Hablemos de tu próximo proyecto</p>
+
+          <form class="contact-form" action="https://formspree.io/f/mnjwbwwd" method="POST" id="contactForm">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto" required></textarea>
+
+            <button type="submit" class="btn-light">Enviar mensaje →</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="contacto-info-col">
+          <h3 class="contacto-heading">Sígueme</h3>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/david_vw/" target="_blank" rel="noopener" class="icon-circle" aria-label="Instagram">IG</a>
+            <a href="https://wa.me/3135183989" target="_blank" rel="noopener" class="icon-circle" aria-label="WhatsApp">WA</a>
+          </div>
+
+          <h3 class="contacto-heading">Contacto directo</h3>
+          <p class="contacto-directo">
+            velascowilcoxdavid@gmail.com<br><br>
+            Cartagena, Colombia<br>
+            Disponible para todo proyecto creativo
+          </p>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="footer-row">
+        <div class="footer-brand">
+          <img src="img/f/f logo b.png" alt="Logo Velasco Wilcox">
+          <span>Velasco Wilcox</span>
+        </div>
+        <p class="footer-copy">© 2026 David Fagith Velasco Wilcox — Todos los derechos reservados</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de proyecto -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalCaption">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">×</button>
+      <div class="modal-media">
+        <div class="carousel-track" id="carouselTrack"></div>
+
+        <button class="carousel-arrow carousel-prev" id="carouselPrev" aria-label="Imagen anterior">‹</button>
+        <button class="carousel-arrow carousel-next" id="carouselNext" aria-label="Siguiente imagen">›</button>
+
+        <div class="carousel-dots" id="carouselDots"></div>
+        <span class="carousel-count" id="carouselCount"></span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-header">
+          <div class="modal-user">
+            <strong>velasco_wilcox</strong>
+            <span>Portafolio</span>
+          </div>
+        </div>
+        <p class="modal-caption" id="modalCaption"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
