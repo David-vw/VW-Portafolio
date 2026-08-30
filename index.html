@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de David Velasco Wilcox, diseñador hipermedia especializado en fotografía, ilustración, diseño gráfico, producción audiovisual y diseño de interfaces.">
+  <title>Velasco Wilcox — Portafolio</title>
+  <link rel="icon" type="image/png" href="img/f/f logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Aplica el tema guardado antes de pintar, para evitar parpadeo -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('vw-theme');
+      if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8XEVS3ZLW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W8XEVS3ZLW');
+  </script>
+</head>
+<body>
+
+  <!-- 01 - Header / Nav -->
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Velasco Wilcox</a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#" class="nav-link">Inicio</a>
+        <a href="#proyectos" class="nav-link">Proyectos</a>
+        <a href="#acerca-de-mi" class="nav-link">Acerca de mí</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 02 - Hero -->
+  <section class="hero">
+    <button type="button" class="hero-photo" id="themeToggle" title="Cambiar tema claro/oscuro" aria-label="Cambiar tema claro/oscuro">
+      <img src="img/f/f logo.png" alt="Retrato de David Velasco Wilcox">
+    </button>
+    <h1 class="hero-title">
+      Velasco Wilcox
+      <span class="hero-subtitle">
+        <span class="hero-red">Diseñador</span> <span class="hero-blue">Hipermedia</span>
+      </span>
+    </h1>
+    <p class="hero-tagline">Narrativas y experiencias interactivas.</p>
+    <a href="#proyectos" class="btn-primary">Ver proyectos ↓</a>
+  </section>
+
+  <!-- 03 - Proyectos Creativos -->
+  <section class="proyectos" id="proyectos">
+    <div class="proyectos-inner">
+      <h2 class="section-title big">Proyectos Creativos</h2>
+      <div class="filtros" role="tablist" aria-label="Filtrar proyectos por categoría">
+        <span class="filtros-label">·</span>
+        <button class="filtro is-active" data-filter="todo" role="tab" aria-selected="true">Todo</button>
+        <span class="filtros-sep">·</span>
+        <button class="filtro" data-filter="audiovisual" role="tab" aria-selected="false">Audivisual</button>
+        <span class="filtros-sep">·</span>
+        <button class="filtro" data-filter="ilustracion" role="tab" aria-selected="false">Ilustración</button>
+        <span class="filtros-sep">·</span>
+        <button class="filtro" data-filter="flyers" role="tab" aria-selected="false">Flyers</button>
+
+        <button class="filtro" data-filter="fotografia" role="tab" aria-selected="false">.</button>
+
+      </div>
+
+      <div class="grid" id="grid-proyectos">
+
+        <a class="card" data-category="ilustracion" data-full-version="true" data-images="ilustraciones/stickers vdb/sticker vdb 01.webp,ilustraciones/stickers vdb/sticker vdb 02.webp,ilustraciones/stickers vdb/sticker vdb 03.webp" href="#" tabindex="0">
+          <div class="card-img"><img src="ilustraciones/stickers vdb/sticker vdb 01.webp" alt="Stickers - vida de barrio" loading="lazy" decoding="async"></div>
+          <p class="card-caption">Stickers — vida de barrio</p>
+          <template class="card-full-caption">
+            'Vida de Barrio' es una serie de stickers basados en la necesidad de llevar
+            con uno ilustraciones basadas en las costumbres propias de los barrios cartageneros.
+          </template>
+        </a>
+
+        <a class="card" data-category="audiovisual" data-full-version="true" data-images="cortos/pedro/portada pedro.jpg,cortos/pedro/cineestesia.jpeg,cortos/pedro/info.jpg" href="#" tabindex="0">
+          <div class="card-img"><img src="cortos/pedro/portada pedro.jpg" alt="Audiovisual — corto - pedro" loading="lazy" decoding="async"></div>
+          <p class="card-caption">Cortometraje — Pedro</p>
+          <template class="card-full-caption">
+            'PEDRO' es un cortometraje que busca retratar la fragilidad de la existencia humana
+            frente al paso del tiempo y la fuerza del entorno. A través de la vida de un
+            pescador de La Boquilla, se propone un viaje emocional donde la rutina, el mar y
+            los manglares se convierten en metáforas del ciclo natural de pérdida y renacimiento.
+            La intención es reflexionar sobre cómo los actos cotidianos pueden esconder
+            historias de culpa, resiliencia y memoria; cómo el paisaje y el hombre se
+            desvanecen juntos cuando la vida cambia de rumbo.
+          </template>
+        </a>
+
+        <a class="card" data-category="audiovisual" data-full-version="true" href="#" tabindex="0">
+          <div class="card-img"><img src="animacion/raspao.jpg" alt="Animación — Raspao" loading="lazy" decoding="async"></div>
+          <p class="card-caption">Animación — Raspao</p>
+          <template class="card-full-caption">
+            'Raspao' es una animación breve el que muestra una escena cotidiana en cartagena, un raspao frente al castillo de sanfelipe.
+          </template>
+        </a>
+
+        <a class="card" data-category="audiovisual" data-full-version="true" href="#" tabindex="0">
+          <div class="card-img"><img src="podcasts/rnr/portada-p-rnr.png" alt="Audiovisual — podcast reggaetón el nuevo rock" loading="lazy" decoding="async"></div>
+          <p class="card-caption">podcast — Reggeton el nuevo rock</p>
+          <template class="card-full-caption"> 
+            'Reggaetón el nuevo rock' es un podcast que explora la evolución del genero llevado de la mano del artista Bad Bunny y como se compara con el rock.</template>
+        
+        </a>
+
+        <a class="card" data-category="audiovisual" data-full-version="true" href="#" tabindex="0">
+          <div class="card-img"><img src="podcasts/qmee/portada-p-qmee.png" alt="Audiovisual — podcast - que mierda es esto?" loading="lazy" decoding="async"></div>
+          <p class="card-caption">Podcast — que mierda es esto?</p>
+          <template class="card-full-caption">
+            '¿Que mierda es esto?' es un podcast que explora las tendencias absurdas, el por qué de su popularidad, su importacia y el verdadero impacto que tienen en la sociedad, la cultura y la economia.
+          </template>
+        </a>
+
+        <a class="card" data-category="audiovisual" data-full-version="true" href="#" tabindex="0">
+          <div class="card-img"><img src="animacion/toto.png" alt="Animación — Totó la Momposina" loading="lazy" decoding="async"></div>
+          <p class="card-caption">Animación — Totó la Momposina</p>
+          <template class="card-full-caption">
+            Esta animación es un homenaje a la cantante Totó la Momposina, quien ha sido una figura importante en la música tradicional colombiana. la animación toma de inspiracion la canción "aguacero de mayo" y esta asistida en menor medidapor IA.
+            </template>
+        </a>
+
+        <a class="card" data-category="flyers" href="#" tabindex="0">
+          <div class="card-img"><img src="img/flyer-luiskiss.png" alt="Flyer — Luis Kiss" loading="lazy" decoding="async"></div>
+          <p class="card-caption">Flyer — Luis Kiss</p>
+          <template class="card-full-caption">
+            Este flyer fue diseñado para promocionar el aniversario del gastro bar Luis Kiss.
+          </template>
+        </a>
+
+        <a class="card" data-category="audiovisual" data-full-version="true" href="#" tabindex="0">
+          <div class="card-img"><img src="animacion/stopmotion.jpg" alt="Animación — stop motion" loading="lazy" decoding="async"></div>
+          <p class="card-caption">Animación — stop motion</p>
+          <template class="card-full-caption">
+            Esta animación es un breve proyecto que experimenta el uso de la técnica de stop motion para contar de manera diferente una historia.
+          </template>
+        </a>
+
+      </div>
+    </div>
+    <a class="proyectos-banner" href="https://drive.google.com/drive/folders/1xDUrlDfhLggF1MHfmTQFwpKfj4TyKNNZ?usp=sharing" target="_blank" rel="noopener noreferrer">
+      <span class="proyectos-banner-icon">▶</span>
+      <span class="proyectos-banner-text">
+        <strong>Puedes ver mis proyectos completos</strong>
+        Todos los proyectos completos y más, en mejor calidad. entra en mi Drive.
+      </span>
+      <span class="proyectos-banner-arrow">→</span>
+    </a>
+
+  </section>
+
+  <!-- 04 - Acerca de mí + Servicios  -->
+  <section class="acerca" id="acerca-de-mi">
+    <div class="acerca-inner">
+      <h2 class="section-title light">Acerca de mí</h2>
+      <div class="acerca-content">
+        <div class="acerca-photo">
+          <img src="img/f/foto perfil.png" alt="David Velasco Wilcox" loading="lazy" decoding="async">
+        </div>
+        <div class="acerca-text">
+          <p class="acerca-nombre">David Fagith Velasco Wilcox</p>
+          <p class="acerca-bio">
+            Soy estudiante de 8vo semestre de Diseño Hipermedia y tengo un perfil multidisciplinar en piezas
+            gráficas, producción audiovisual, fotografía, ilustración e interfaces. Me interesa explorar
+            distintos lenguajes visuales y adaptarme a diferentes formatos y necesidades creativas. Busco una
+            práctica donde pueda aportar mis conocimientos, seguir aprendiendo junto a un equipo con experiencia
+            y fortalecer mi proceso creativo en un entorno profesional.
+          </p>
+          <div class="software-row">
+            <img src="img/i/i ai1.png" alt="Adobe Illustrator" title="Adobe Illustrator" loading="lazy" decoding="async">
+            <img src="img/i/i affinity1.png" alt="Affinity" title="Affinity" loading="lazy" decoding="async">
+            <img src="img/i/i lr1.png" alt="Adobe Lightroom" title="Adobe Lightroom" loading="lazy" decoding="async">
+            <img src="img/i/i davinci1.png" alt="DaVinci Resolve" title="DaVinci Resolve" loading="lazy" decoding="async">
+            <img src="img/i/i figma1.png" alt="figma" title="figma" loading="lazy" decoding="async">
+            <img src="img/i/i capcut1.png" alt="CapCut" title="CapCut" loading="lazy" decoding="async">
+            <img src="img/i/i ps1.png" alt="Adobe Photoshop" title="Adobe Photoshop" loading="lazy" decoding="async">
+            <img src="img/i/i xd1.png" alt="Adobe XD" title="Adobe XD" loading="lazy" decoding="async">
+            <img src="img/i/i an1.png" alt="Adobe Animate" title="Adobe Animate" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title light" id="servicios">¿Cómo puedo ayudarte?</h2>
+      <div class="servicios-grid">
+        <div class="servicio-card">
+          <h3>Audiovisual</h3>
+          <p>Fotografía, edición de video y corrección de color.</p>
+        </div>
+        <div class="servicio-card">
+          <h3>Identidad Visual</h3>
+          <p>Branding, manuales de marca y diseño gráfico.</p>
+        </div>
+        <div class="servicio-card">
+          <h3>UX/UI Design</h3>
+          <p>Páginas web, apps móviles y prototipos interactivos.</p>
+        </div>
+        <div class="servicio-card">
+          <h3>Postproducción</h3>
+          <p>Montaje, Motion Graphics y finalización de video.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 - Contacto + Footer -->
+  <section class="contacto" id="contacto">
+    <div class="contacto-inner">
+      <div class="contacto-grid">
+        <div class="contacto-form-col">
+          <h2 class="section-title light">Contacto</h2>
+          <p class="contacto-sub">Hablemos de tu próximo proyecto</p>
+
+          <form class="contact-form" action="https://formspree.io/f/mnjwbwwd" method="POST" id="contactForm">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto" required></textarea>
+
+            <button type="submit" class="btn-light">Enviar mensaje →</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="contacto-info-col">
+          <h3 class="contacto-heading">Sígueme</h3>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/david_vw/" target="_blank" rel="noopener" class="icon-circle" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="5.5"/>
+                <circle cx="12" cy="12" r="4.2"/>
+                <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/3135183989" target="_blank" rel="noopener" class="icon-circle" aria-label="WhatsApp">
+              <svg viewBox="0 0 32 32" width="22" height="22" fill="currentColor">
+                <path d="M16.001 2.667c-7.363 0-13.334 5.97-13.334 13.333 0 2.354.615 4.62 1.786 6.62L2.667 29.333l6.9-1.75a13.27 13.27 0 0 0 6.434 1.65h.006c7.363 0 13.334-5.97 13.334-13.333 0-3.563-1.388-6.913-3.907-9.432a13.246 13.246 0 0 0-9.433-3.801zm0 24.4h-.005a11.06 11.06 0 0 1-5.64-1.545l-.405-.24-4.096 1.04 1.093-3.99-.264-.41a11.043 11.043 0 0 1-1.69-5.922c0-6.106 4.968-11.073 11.078-11.073a11.02 11.02 0 0 1 7.834 3.245 11.006 11.006 0 0 1 3.24 7.837c-.003 6.106-4.972 11.058-11.145 11.058z"/>
+                <path d="M22.024 18.617c-.331-.166-1.958-.966-2.262-1.076-.303-.11-.524-.166-.744.166-.221.331-.855 1.076-1.049 1.297-.193.221-.386.248-.717.083-.331-.166-1.397-.515-2.66-1.64-.983-.877-1.646-1.96-1.84-2.291-.193-.331-.02-.51.146-.675.15-.149.331-.386.497-.58.166-.193.221-.331.331-.552.11-.221.055-.414-.028-.58-.083-.166-.744-1.793-1.02-2.456-.269-.646-.542-.558-.744-.568l-.634-.012c-.221 0-.58.083-.883.414-.303.331-1.157 1.13-1.157 2.756 0 1.627 1.184 3.199 1.349 3.42.166.221 2.33 3.559 5.645 4.99.789.34 1.404.544 1.884.696.792.252 1.513.216 2.083.131.635-.095 1.958-.801 2.234-1.575.276-.773.276-1.436.193-1.575-.083-.14-.303-.221-.634-.386z"/>
+              </svg>
+            </a>
+          </div>
+
+          <h3 class="contacto-heading">Contacto directo</h3>
+          <p class="contacto-directo">
+            velascowilcoxdavid@gmail.com<br><br>
+            Cartagena, Colombia<br>
+            Disponible para todo proyecto creativo
+          </p>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="footer-row">
+        <div class="footer-brand">
+          <img src="img/f/f logo b.png" alt="Logo Velasco Wilcox" loading="lazy" decoding="async">
+          <span>Velasco Wilcox</span>
+        </div>
+        <p class="footer-copy">© 2026 David Fagith Velasco Wilcox — Todos los derechos reservados</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de proyecto -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalCaption">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">×</button>
+      <div class="modal-media">
+        <div class="carousel-track" id="carouselTrack"></div>
+
+        <button class="carousel-arrow carousel-prev" id="carouselPrev" aria-label="Imagen anterior">‹</button>
+        <button class="carousel-arrow carousel-next" id="carouselNext" aria-label="Siguiente imagen">›</button>
+
+        <div class="carousel-dots" id="carouselDots"></div>
+        <span class="carousel-count" id="carouselCount"></span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-header">
+          <div class="modal-user">
+            <strong>velasco_wilcox</strong>
+            <span>Portafolio</span>
+          </div>
+        </div>
+        <p class="modal-caption" id="modalCaption"></p>
+        <a class="modal-full-link" id="modalFullLink" href="#" target="_blank" rel="noopener noreferrer" hidden>
+          <span class="modal-full-link-icon">▶</span>
+          <span class="modal-full-link-text">
+            <strong>Mira el proyecto completo</strong>
+            Aquí solo se muestra un adelanto — la versión completa y en mejor calidad está en mi Drive.
+          </span>
+          <span class="modal-full-link-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
